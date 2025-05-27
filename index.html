@@ -1,9 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta http-equiv="refresh" content="0; url=https://hoksw.lovestoblog.com/">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
 </head>
+
 <body>
-  <p><a href="https://hoksw.lovestoblog.com/">正在为你准备页面</a>。</p>
+<h5 id="oopp"></h5>
+
+	<script>
+		isWeChatBrowser();
+		function isWeChatBrowser() {
+			var ua = navigator.userAgent.toLowerCase();
+			return ua.indexOf('micromessenger') !== -1;
+		}
+
+		if (isWeChatBrowser()) {
+			document.getElementById("oopp").innerHTML="请在右上角选择 -在浏览器打开-";
+		} else {
+			document.getElementById("oopp").innerHTML="正在打开";
+			window.open("https://hoksw.lovestoblog.com/","_self");
+			document.getElementById("oopp").innerHTML="正在打开2";
+
+
+		}
+	</script>
 </body>
+
 </html>
